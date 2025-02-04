@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Pro</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Pixel Pro</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <div class="inicio-content">
+                <h1>Bienvenido a Pixel Pro</h1>
+                <p>Soluciones digitales a tu medida.</p>
+                <a href="#servicios" class="cta-button">Ver Servicios</a>
+            </div>
+            <img src="./img/tecnologia-2024-2.png" alt="Tecnología 2024" class="animated-image">
+        </section>
+        
+        <section id="servicios">
+            <h2 class="title">Nuestros Servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio">
+                    <img src="./img/responsabilidad.gif" alt="Diseño Web">
+                    <h3>Diseño Web</h3>
+                    <p>Creamos sitios web atractivos y funcionales.</p>
+                </div>
+                <div class="servicio">
+                    <img src="./img/diseñoweb.gif" alt="Diseño Responsivo">
+                    <h3>Diseño Responsivo</h3>
+                    <p>Tu sitio se verá genial en todos los dispositivos.</p>
+                </div>
+                <div class="servicio">
+                    <img src="./img/giphy.gif" alt="SEO">
+                    <h3>SEO</h3>
+                    <p>Optimizamos tu sitio para los motores de búsqueda.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portafolio">
+            <h2 class="title">Nuestro Portafolio</h2>
+            <div class="portafolio-grid">
+                <div class="proyecto">
+                    <img src="./img/hope.png" alt="Proyecto 1">
+                   <a href="https://proyecto15-texto-iluminado.vercel.app/" target="_blank">Fuentes Luminosas</a>
+                </div>
+                <div class="proyecto">
+                    <img src="./img/otro.png" alt="Proyecto 2">
+                    <a href="https://proyecto13-login.vercel.app/" target="_blank">Login Personalizados</a>
+                </div>
+                <div class="proyecto">
+                    <img src="./img/Captura de pantalla 2025-01-26 192150.png" alt="Proyecto 3">
+                    <a href="https://proyecto14-ondas-inferiores.vercel.app/" target="_blank">Efectos y Animaciones</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2 class="title">Contáctanos</h2>
+            <form id="contactForm">
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="mensaje" placeholder="Mensaje" required rows="5"></textarea>
+                <button type="submit" class="cta-button">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2023 Pixel Pro. Todos los derechos reservados.
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

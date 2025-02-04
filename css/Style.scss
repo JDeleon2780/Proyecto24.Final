@@ -1,0 +1,468 @@
+/* Mejoras de responsive y animaciones */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.8;
+  color: #333;
+  overflow-x: hidden;
+  
+}
+
+/* Animación general para secciones */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header {
+  background: linear-gradient(135deg, #0D3B66 0%, #3B1C75 100%);
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  
+}
+
+#servicios,
+#portafolio,
+#contacto {
+  scroll-margin-top: 95px; 
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #fff 0%, #f4a261 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideIn 1s ease-out;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  text-decoration: none;
+  color: #fff;
+  
+
+}
+
+.nav-links a {
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-decoration: none;
+  color: #fff;
+  
+ 
+}
+
+.nav-links a:hover {
+  background: #f4a261;
+  color: #ffffff;
+  transform: scale(1.05);
+  
+}
+
+main {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 6rem;
+  animation: slideIn 1s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+#inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  min-height: 90vh;
+  text-align: center;
+}
+
+#inicio img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+#inicio img:hover {
+  transform: scale(1.02);
+}
+
+.inicio-content {
+  max-width: 800px;
+  padding: 2rem;
+}
+
+#inicio .inicio-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inicio h1 {
+  font-size: 3.5rem;
+  margin: 0 auto 2rem; /* Centrado con margen automático */
+  line-height: 1.2;
+  letter-spacing: -1px;
+  animation: slideIn 1s ease-out 0.2s forwards;
+  opacity: 0;
+  text-align: center; /* Asegura que el texto esté centrado */
+}
+
+#inicio p {
+  font-size: 1.4rem;
+  margin: 0 auto 3rem; /* Centrado con margen automático */
+  color: #666;
+  animation: slideIn 1s ease-out 0.4s forwards;
+  opacity: 0;
+  text-align: center; /* Asegura que el texto esté centrado */
+  max-width: 600px; /* Opcional: para evitar líneas muy largas */
+}
+
+.cta-button {
+  background: linear-gradient(45deg, #0D3B66 0%, #3B1C75 100%);
+  color: #fff;
+  padding: 1.2rem 2.5rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(13, 59, 102, 0.4);
+}
+
+.servicios-grid,
+.portafolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  display: flex;
+  gap: 3rem;
+  justify-items: center;
+  justify-content: center;
+
+}
+
+
+.servicio img {
+  height: 155px;
+  border-radius: 15px;
+  object-fit: cover;
+  width: 350px;
+  
+}
+.servicio h3 ,p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+.servicio p {
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+.portafolio ,.title {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.portafolio h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}	
+
+.servicio,
+.proyecto {
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.servicio:hover,
+.proyecto:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+.proyecto img {
+  height: 155px;
+  border-radius: 15px;
+  object-fit: cover;
+  width: 350px;
+  
+}
+.proyecto a {
+  display: block; 
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0 auto 0.5rem; 
+  text-decoration: none;
+  width: fit-content; 
+}
+
+/* Responsive 200% mejorado */
+@media (max-width: 1200px) {
+  nav {
+    padding: 0 1.5rem;
+  }
+  
+  .logo {
+    font-size: 2rem;
+  }
+  
+  #inicio h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-links {
+    gap: 1.5rem;
+  }
+  
+  #inicio {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+  
+  .servicios-grid,
+  .portafolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .burger {
+    display: block;
+  }
+  
+  #inicio h1 {
+    font-size: 2.5rem;
+  }
+  
+  #inicio p {
+    font-size: 1.2rem;
+  }
+  
+  .servicio,
+  .proyecto {
+    padding: 1.5rem;
+  }
+}
+/* Efectos unificados para Servicios y Proyectos */
+.servicio,
+.proyecto {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  background: #fff;
+  border: 2px solid transparent;
+  overflow: hidden;
+}
+
+.servicio:hover,
+.proyecto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  border-color: rgba(244, 162, 97, 0.2);
+}
+
+/* Efecto de overlay gradient sutil */
+.servicio::before,
+.proyecto::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to top, rgba(13, 59, 102, 0.05), transparent);
+  transition: height 0.3s ease;
+  z-index: 1;
+}
+
+.servicio:hover::before,
+.proyecto:hover::before {
+  height: 100%;
+}
+
+/* Contenido (se mantiene encima del overlay) */
+.servicio-content,
+.proyecto-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Transición para enlaces */
+.servicio a,
+.proyecto a {
+  transition: all 0.3s ease;
+  color: #333;
+  text-decoration: none;
+}
+
+.servicio:hover a,
+.proyecto:hover a {
+  color: #0D3B66;
+}
+
+/* Transición para imágenes */
+.servicio img,
+.proyecto img {
+  transition: transform 0.4s ease;
+  transform-origin: center bottom;
+}
+
+.servicio:hover img,
+.proyecto:hover img {
+  transform: scale(1.02);
+}
+
+/* Animación de texto */
+.servicio h3,
+.proyecto h3 {
+  transition: color 0.3s ease;
+}
+
+.servicio:hover h3,
+.proyecto:hover h3 {
+  color: #0D3B66;
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0 1rem;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+  }
+  
+  #inicio h1 {
+    font-size: 2.2rem;
+  }
+  
+  .cta-button {
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  section {
+    margin-bottom: 4rem;
+  }
+}
+
+/* Animaciones adicionales */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.animated-image {
+  animation: float 4s ease-in-out infinite;
+}
+
+.servicio,
+.proyecto{
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideIn 0.6s ease-out forwards;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loader {
+  animation: rotate 1.5s linear infinite;
+}
+
+/* Mejora de formulario */
+#contacto form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#contacto input,
+#contacto textarea {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#contacto button {
+  background-color: #333;
+  color: #fff;
+  padding: 0.8rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#contacto button:hover {
+  background-color: #f4a261;
+}
+
+footer{
+  background: linear-gradient(#0D3B66, #3B1C75);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0px;
+  font-size: 1rem;
+}
